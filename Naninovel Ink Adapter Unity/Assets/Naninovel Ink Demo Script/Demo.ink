@@ -95,9 +95,9 @@ n: Alright, it's time to summon Kohaku-chan on scene![i][char b.ShowCharacter tr
 @hide b wait:false
 @hidePrinter 
 @wait 0.5
-@char k look:right pos:25 tint:#ffffff00 time:0
+@char k look:right pos:25 tint:\#ffffff00 time:0
 @char k.Default transition:Ripple easing:EaseOutCubic time:3 wait:false
-@char k tint:#ffffffff time:2
+@char k tint:\#ffffffff time:2
 @style b
 k: .[wait 0.5] .[wait 0.5] .
 @hidePrinter  wait:false
@@ -145,7 +145,7 @@ n: You have to do something, use naninovel script![skipInput]
 - (Choices)
 
 {tries == 2:
-    @print "Hide! Use the hide command!" author:n if:tries==2
+    @print "Hide! Use the hide command!" author:n
 }
 
 + {!triedAngry}[@char Kohaku.Angry] -> Angry
@@ -198,8 +198,8 @@ n.Surprise: No way...[i] She's hacking[sfx Glitter][sfx Bubbles volume:0.5][spaw
 @sfx Glitch
 @hidePrinter  wait:false
 @char n pos:65 scale:0.9 wait:false
-@char k look:right pos:25 tint:#ffffff00 time:0
-@char k.Angry transition:Pixelate tint:#ffffff easing:EaseOutCubic time:2.5 wait:false
+@char k look:right pos:25 tint:\#ffffff00 time:0
+@char k.Angry transition:Pixelate tint:\#ffffff easing:EaseOutCubic time:2.5 wait:false
 @spawn Blur params:,1 wait:false
 @camera offset:-3.75,2 zoom:0.45 easing:SmoothStep time:1
 @wait 2
