@@ -1,0 +1,344 @@
+; Localization script for `Main`
+
+# 7db6f932
+; ...
+
+# 896179a
+; n: Oh, hey there!
+n: О, привет!
+
+# 64fc6643
+; n: Welcome to the demo![i] I'll show what you can achieve with Naninovel along with some brief tutorials.
+n: Добро пожаловать в демо![i] Я покажу, что вы можете создать с помощью Naninovel.
+
+# 69507d47
+; n: By the way, this whole demo is done entirely with Naninovel, without even a line of code.
+n: Кстати, всё это демо создано без строчки кода.
+
+# b972d630
+; n: Shall we get started then?
+n: Ну что же, начнём?
+
+# 4c5cb40e
+; n: Imagine you've imported Naninovel package to your Unity project.[i][char b.CreateScript transition:Ripple time:1 pos:{pos} wait:false][char n pos:80 time:0.5 wait:false] For starters, create a <b>naninovel script</b>.[i] Naninovel scripts are text documents where you control what happens on scenes.[i] Open them with a text editor of your choice, like Notepad, Word or Atom.
+n: Допустим, вы импортировали Naninovel в ваш Unity проект.[i][char b.CreateScript transition:Ripple time:1 pos:{pos} wait:false][char n pos:80 time:0.5 wait:false] Для начала, создадим <b>novel script</b>.[i] Скрипт это текстовый документ, в котором описано, что должно происходить на сцене; подобно сценарию для кино или пьесы.[i] Скрипты можно открыть с помощью любого текстового редактора, например Notepad, Word или Atom.
+
+# bb9cb0ae
+; n: For example, here is the contents of a naninovel script used for this demo so far.[i] Don't worry if it looks complicated, I'll show how it works step by step a bit later.
+n: Например, вот содержание скрипта, который описывает происходящее сейчас на сцене.[i] Не волнуйтесь, если это кажется непонятным, я всё объясню чуть позже.
+
+# 92b36ed0
+; n: Now, open the script in a text editor.[i][char b.HelloWorld transition:Ripple time:1 pos:{pos} wait:false] Let's start with showing a simple text. Simply type the text you wish to show, like this.[i] Enter play mode and start new game to see the result.[skipInput]
+n: Теперь откройте скрипт в редакторе.[i][char b.HelloWorld transition:Ripple time:1 pos:{pos} wait:false] Для начала выведем текст. Просто наберите текст, который должен быть показан.[i] Войдите в режим игры и начните новую игру, чтобы увидеть результат.[skipInput]
+
+# f7cc44f9
+; @choice "Hello World!" goto:.Hello
+@choice "Привет, Мир!" goto:.Hello
+
+# 2608be0
+; Hello World!
+Привет, Мир!
+
+# 321585db
+; n: Easy, right?[i][char b.Name transition:Ripple time:1 pos:{pos} wait:false] To associate shown text with a character, just add its name followed by a colon before the text.[skipInput]
+n: Легко, не правда ли?[i][char b.Name transition:Ripple time:1 pos:{pos} wait:false] Чтобы ассоциировать текст с персонажем, добавьте его имя перед репликой и двоеточием.[skipInput]
+
+# 6fbebb9
+; @choice "John: Hello World!" goto:.John
+@choice "Вася: Привет, Мир!" goto:.John
+
+# 968f6d9f
+; John: Hello World!
+Вася: Привет, Мир!
+На этом пример локализации заканчивается. Следующий текст будет выводиться без перевода.
+
+# 1c96ad04
+; n: Now, let's add a <b>character</b> on scene.[i] Characters in Naninovel can be based on regular and diced sprites, animated Live2D models and 3D meshes; you can add your own implementations as well.[i] To keep it simple, let's use a regular sprite implementation for now.
+
+# 86868d26
+; n: Using Naninovel editor menu, open characters manager and add a new character record specifying its name. Double click the record to open settings, where you can select the implementation, add appearance assets and tweak other settings.
+
+# 35ff476e
+; n: Alright, it's time to summon Kohaku-chan on scene![i][char b.ShowCharacter transition:Ripple time:1 pos:{pos} wait:false] Type the following expression in the naninovel script and run the game.[skipInput]
+
+# 4715cd71
+; @choice "@char Kohaku" goto:.Kohaku
+
+# 941b06fb
+; k: .[wait 0.5] .[wait 0.5] .
+
+# 175fab7e
+; k: Whoa, what's going on?! Where am I?
+
+# ff3d4540
+; n.Surprise: Oh dear, looks like we've snatched you away in the middle of a class.[i][char n.Default] Name's Nani-kun, sorry for the sudden call. Would you help us with this demo tutorial, please?
+
+# b03dddc6
+; k.Angry: Gosh, yet another Asset Store stuff? Why they always use me to show it off?..
+
+# b5ced34d
+; k: Though...[i][char k pos:37.5 wait:false] Those ears, so fluffy.[i][char k pos:40 wait:false][char n pos:80 scale:0.95 wait:false] I just can't resist...
+
+# 6d3bec42
+; n: Uhm, wait...[i] What[skipInput]
+
+# 42cb5003
+; n: No, stop! My ears...
+
+# 7e582858
+; n: You have to do something, use naninovel script![skipInput]
+
+# 46403585
+; @choice "@char Kohaku.Angry" goto:.Angry if:!triedAngry
+
+# 8d9d032b
+; @choice "@char Kohaku pos:85" goto:.Move if:!triedMoving
+
+# a6ba0f80
+; @print "Hide! Use the hide command!" author:n if:tries==2
+
+# 7e0db96e
+; @choice "@hide Kohaku" goto:.Hide if:tries==2
+
+# 4144d28
+; n.Confidence: You've moved her away! Good job!
+
+# 3eab7181
+; k: You won't get away from my passion!
+
+# 375927c9
+; n.Surprise: You just made her angry! Not sure if it'll help...
+
+# b1142e30
+; k.Happy: No way!
+
+# 5f97137e
+; n.Confidence: That's it! You've removed her from the scene!
+
+# ea4fe0be
+; n: Guess we should have called someone else[sfx Glitter volume:0.25][spawn DigitalGlitch params:0.1] instead...
+
+# b50a263
+; n.Default: Wait, did you hear[sfx Glitter volume:0.5][spawn DigitalGlitch params:0.25] that?
+
+# 81f0131d
+; n.Surprise: No way...[i] She's hacking[sfx Glitter][sfx Bubbles volume:0.5][spawn DigitalGlitch] through![i] They don't call her <b>Unity</b>-chan for nothing!
+
+# 25cb4c34
+; k.Confidence: That's what I call happiness overdose!
+
+# 7fc6a724
+; n.Pain: I was going to die...
+
+# 213e8407
+; n.Default: By the way, those glitch effects were scary as hell; was it some kind of an <b>@spawn</b> command?
+
+# 8a25bbe
+; k.Confidence: Yep, similar to the one you've used for shaking text window.[i] Wanna try?[skipInput]
+
+# 22929154
+; @choice "@spawn DigitalGlitch" goto:.Glitch
+
+# 2c79c04d
+; @choice "@spawn ShakePrinter" goto:.Shake
+
+# e1fd0ffb
+; @choice "That's enough" goto:.Enough
+
+# 499260d6
+; n: And of course you can add your own custom effects. It's as easy as dropping a prefab with the effect to spawn resources list; then use <b>@spawn</b> command followed by the prefab name to activate it.
+
+# a44e57f2
+; n: It's also possible to place a command inside the text, so that it could be executed at the right moment. Like this.[skipInput]
+
+# beb88c8e
+; @choice "John: Shake[spawn ShakePrinter] it!" goto:.JohnShake
+
+# ad66fbe6
+; John: Shake[spawn ShakePrinter] it!
+
+# 1d127eda
+; k.Default: By the way, are there other ways to output the text? Like, if I want to print a whole paragraph — it won't even fit this window.
+
+# 17e2f6c0
+; n: Actually, the window can resize to fit as mush as the screen allow, but there is another way.[i] You can use a <b>fullscreen</b> printer; it's specifically designed for cases like this. 
+
+# d5d5813f
+; n: Use <b>@printer</b> command to switch printers. There are several built-in ones, and you can always add your own. Try it out![skipInput]
+
+# 44165f66
+; @choice "@printer Fullscreen" goto:.FullscreenPrinter
+
+# 487fd85e
+; @choice "@printer Dialogue" goto:.DialoguePrinter
+
+# 7a944a3d
+; @choice "@printer Wide" goto:.WidePrinter
+
+# a2ac7cbf
+; @choice "Ok, I've got it!" goto:.EndPrinter
+
+# 30f79134
+; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta, turpis id porttitor maximus, mi tellus tempus justo, sit amet porttitor lorem velit vitae libero. Nunc dapibus maximus molestie. Etiam luctus arcu in lorem tristique tristique. Vestibulum tincidunt eget ante eget sodales.[i][br][br]Proin convallis purus mi, sit amet egestas nibh suscipit vitae. Praesent tempor lectus ex, at vehicula arcu condimentum vel. Vestibulum eu fermentum odio, eleifend euismod nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.[i][br][br]Duis eu pellentesque magna, ut molestie eros. Integer iaculis accumsan nisl, vel rutrum enim bibendum non. Sed dui ipsum, sodales ut rutrum ac, elementum ac lectus. 
+
+# e3f7a758
+; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta, turpis id porttitor maximus, mi tellus tempus justo, sit amet porttitor lorem velit vitae libero. Vestibulum tincidunt eget ante eget sodales.[i][br][br]Proin convallis purus mi, sit amet egestas nibh suscipit vitae. Praesent tempor lectus ex, at vehicula arcu condimentum vel. Vestibulum eu fermentum odio, eleifend euismod nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.[i][br][br]Duis eu pellentesque magna, ut molestie eros. Integer iaculis accumsan nisl, vel rutrum enim bibendum non. Sed dui ipsum, sodales ut rutrum ac, elementum ac lectus. 
+
+# 7abbec2f
+; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta, turpis id porttitor maximus, mi tellus tempus justo, sit amet porttitor lorem velit vitae libero. Vestibulum tincidunt eget ante eget sodales.
+
+# bd6b06be
+; k: Okay, and what about making those windows something more than just boring rectangles?
+
+# d3b6e76d
+; n: Sure, you can modify them any way you want.
+
+# ca022bc9
+; k.Surprise: Really?! Wanna try this!
+
+# d57ff717
+; n: Uhm, sure...
+
+# 261963ec
+; k: .[wait 0.5][spawn ShakePrinter] .[wait 0.5][spawn ShakePrinter] .[spawn ShakePrinter]
+
+# d2a263b
+; k.Happy: Ta-daa~!
+
+# cfa77b22
+; n: ...[i] Why cats?
+
+# ae3db1e6
+; k.Surprise: What, you don't like cats?
+
+# 1237e5ca
+; n.Happy: It's complicated...
+
+# 5616758d
+; @choice "Keep the printer" goto:.PimpedKept
+
+# 85e285b9
+; @choice "Revert to default" goto:.PimpedChanged
+
+# 680e58df
+; n: Whatever...
+
+# 4eb70657
+; k: Boring!
+
+# 44339a4a
+; n: Guess we should defuse the situation. How about changing a background?
+
+# b4b22baa
+; k.Default: Yeah, I would like some fresh air.
+
+# 9544f9c1
+; n: Add background assets the same way you've added characters and use <b>@back</b> command to switch them.
+
+# d8e763d5
+; @choice "@back Forest" goto:.SelectBack
+
+# 3c06422f
+; n: You can also specify a transition effect to use when switching backgrounds. Aside from default cross-fade, there are a total of 23 different transition effects available out of the box and an option to add custom ones.[i] Here are some of them.
+
+# a38a3b3a
+; @choice "@back Desert.SlideIn" goto:.TransitionsSlideIn
+
+# 3f44c5e4
+; @choice "@back Desert.Crumble" goto:.TransitionsCrumble
+
+# 42ad3d93
+; @choice "@back Desert.CloudReveal" goto:.TransitionsCloudReveal
+
+# 1a63db89
+; @choice "@back Desert.Pixelate" goto:.TransitionsPixelate
+
+# c3445946
+; @choice "@back Desert.Ripple" goto:.TransitionsRipple
+
+# a510f6f1
+; @choice "@back Desert.LineReveal" goto:.TransitionsLineReveal
+
+# f2f380e3
+; @choice "@back Desert.RadialBlur" goto:.TransitionsRadialBlur
+
+# 39eb0a4b
+; @choice "@back Desert.Blinds" goto:.TransitionsBlinds
+
+# c4d1cc50
+; @choice "Ok, I've got it" goto:.TransitionsEnd
+
+# 99603dbc
+; k: Hm, but all those backgrounds, they look a bit...[wait 0.7] flat?
+
+# 26586002
+; n: Well, they are sprite backgrounds, after all.[i] Just like characters, backgrounds can be based on multiple implementations: sprites, animated objects, videos and even full-fledged Unity scenes.
+
+# 7c708b26
+; k.Surprise: You said videos? 
+
+# c07f6db
+; n: Indeed. Simply add a video file as another background resource and use the same command.[i] Check this out.[skipInput]
+
+# 5abbe378
+; @choice "@back VideoForest" goto:.SelectVideoBack
+
+# 1ca3157c
+; k.Default: Impressive!
+
+# f2e8a2d8
+; n: Though, I think <b>scene</b> and <b>generic</b> backgrounds are even more amazing. You can put literally anything into them: animated objects, particle systems, even scripted stuff!
+
+# 500dd3e0
+; k.Angry: Wait, I think we're missing something essential.
+
+# 9f15aad1
+; n: Like what?
+
+# 9cc2fc6d
+; k: Listen closely...
+
+# 711341a
+; n: ...[i] Don't think I can hear anything.
+
+# b2275d03
+; k.Confidence: Exactly! 
+
+# eba32996
+; n: Ah, I've got it. Right, let's talk about audio.
+
+# c9df0cab
+; n: Use <b>@bgm</b> and <b>@sfx</b> commands to play background music and sound effects respectively.[i] Both music and sound effect audio files can be added in the same way as all the other resources via editor GUI.
+
+# fcc055ad
+; n: The music will loop by default, though you can change this, as well as volume and fade duration.[i] Here, check out these music tracks.[skipInput]
+
+# 9aadce73
+; @choice "@bgm CloudNine" goto:.BgmCloudNine
+
+# 911a2d9e
+; @choice "@bgm JellyRolls" goto:.BgmJellyRolls
+
+# 5428453e
+; @choice "Ok, I've got it!" goto:.EndBgm
+
+# 6c4440f3
+; n.Default: On the contrary, sound effects won't loop by default.[skipInput]
+
+# 79dfa63d
+; @choice "@sfx Glitch" goto:.SfxGlitch
+
+# ad03738e
+; @choice "@sfx Glitter" goto:.SfxGlitter
+
+# 19b6f734
+; @choice "@sfx Bubbles" goto:.SfxBubbles
+
+# 2e4ab517
+; @choice "Ok, I've got it!" goto:.EndSfx
+
+# cd66dda1
+; n: This concludes the demo.[i] For more information and tutorials check out <b>naninovel.com</b>.
+
+# 8c64c952
+; n: See ya!

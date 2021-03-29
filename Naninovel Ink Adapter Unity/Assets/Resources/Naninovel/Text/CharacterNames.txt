@@ -1,0 +1,3 @@
+b: b
+k: Kohaku
+n: Nani-kun

@@ -1,0 +1,55 @@
+﻿VariableInput.Submit: ВВОД
+SettingsMenu.VolumeVoice: Голос:
+SettingsMenu.VolumeMusic: Музыка:
+SettingsMenu.VolumeMaster: Общий:
+SettingsMenu.VolumeEffects: Эффекты:
+SettingsMenu.Tab.Text: ТЕКСТ
+SettingsMenu.Tab.Sound: ЗВУК
+SettingsMenu.Tab.Basic: БАЗОВЫЕ
+SettingsMenu.SkipMode: Пропускать:
+SettingsMenu.ScreenMode: Режим экрана:
+SettingsMenu.Resolution: Разрешение:
+SettingsMenu.PreviewText: Шла Саша по шоссе и сосала сушку. Дело было в сентябре, было ей не скушно. Шла она уже полдня, очень торопилась. Сушку есть было нельзя, саша очень злилась.
+SettingsMenu.Preview: Превью
+SettingsMenu.MessageSpeed: Скорость печати:
+SettingsMenu.Language: Язык:
+SettingsMenu.Graphics: Графика:
+SettingsMenu.FontSize: Размер:
+SettingsMenu.Font: Шрифт:
+SettingsMenu.AutoDelay: Задержка:
+SaveLoadMenu.Tab.Save: СОХРАНИТЬ
+SaveLoadMenu.Tab.QuickLoad: Б. ЗАГРУЗКА
+SaveLoadMenu.Tab.Load: ЗАГРУЗКА
+Naninovel.UI.SaveLoadMenu.OverwriteSaveSlotMessage: Вы уверены, что хотите перезаписать слот сохранения?
+Naninovel.UI.SaveLoadMenu.DeleteSaveSlotMessage: Вы уверены, что хотите удалить слот сохранения?
+Naninovel.UI.GameStateSlot.EmptySlotLabel: Пусто
+Naninovel.UI.GameSettingsSkipModeDropdown.ReadOnly: Прочитанное
+Naninovel.UI.GameSettingsSkipModeDropdown.Everything: Всё
+Naninovel.UI.GameSettingsScreenModeDropdown.Windowed: Окно
+Naninovel.UI.GameSettingsScreenModeDropdown.MaximizedWindow: Расширенное Окно
+Naninovel.UI.GameSettingsScreenModeDropdown.FullScreenWindow: Полноэкранное Окно
+Naninovel.UI.GameSettingsScreenModeDropdown.ExclusiveFullScreen: Полный Экран
+Naninovel.UI.GameSettingsFontSizeSlider.RestartMessage: Перезапустите игру, чтобы изменения вступили в силу.
+Naninovel.UI.GameSettingsFontDropdown.RestartMessage: Перезапустите игру, чтобы изменения вступили в силу.
+Naninovel.UI.ControlPanelTitleButton.ConfirmationMessage: Вы точно хотите выйти? Несохраненный прогресс будет утерян.
+General.Return: НАЗАД
+General.Close: ЗАКРЫТЬ
+ExternalScriptsBrowser.Title: ВНЕШНИЕ СКРИПТЫ
+ExternalScriptsBrowser.Info: Выберите скрипт
+ControlPanel.Title: МЕНЮ
+ControlPanel.Tips: TIPS
+ControlPanel.Skip: ПРОПУСК
+ControlPanel.Settings: НАСТРОЙКИ
+ControlPanel.Save: СОХРАНИТЬ
+ControlPanel.QuickSave: Б.СОХР
+ControlPanel.QuickLoad: Б.ЗАГР
+ControlPanel.Log: ЛОГ
+ControlPanel.Load: ЗАГРУЗИТЬ
+ControlPanel.Hide: СКРЫТЬ
+ControlPanel.Auto: АВТО
+Confirmation.Yes: ДА
+Confirmation.No: НЕТ
+TitleMenu.Continue: ПРОДОЛЖИТЬ
+TitleMenu.Exit: ВЫХОД
+TitleMenu.Settings: НАСТРОЙКИ
+CGGallery.Title: КАРТИНОЧКИ
