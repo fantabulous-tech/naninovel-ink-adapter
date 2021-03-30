@@ -4,7 +4,7 @@ VAR tries = 0
 VAR shakeCount = 0
 
 You are now running an Ink script!
-Here is Naninovel's Demo script running from `Assets/Ink/Demo.ink`
+Here is Naninovel's Demo script running from `Assets/Naninovel Ink Demo Script/Demo.ink`
 
 + [Start Demo] -> Start
 
