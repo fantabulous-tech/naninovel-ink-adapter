@@ -2,56 +2,54 @@
 using Ink.Runtime;
 using Naninovel;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class NaninovelInkAdapter : MonoBehaviour {
     private static NaninovelInkAdapter s_Instance;
 
-    [SerializeField] private TextAsset inkJSONAsset;
+    [FormerlySerializedAs("inkJSONAsset"),SerializeField] private TextAsset m_InkJsonAsset;
 
-    public Story Story;
     private IScriptPlayer m_ScriptPlayer;
-    private Script m_CurrentScript;
     private int m_ScriptIndex;
 
-    private void Start() {
-        if (s_Instance) {
-            Debug.LogError("Duplicate InkPlayerAdapter found! (original)", s_Instance);
-            Debug.LogError("Duplicate InkPlayerAdapter found! (duplicate)", this);
-            return;
-        }
+    /// <summary>
+    /// The currently running Ink story.
+    /// </summary>
+    public Story Story { get; private set; }
 
+    private void Start() {
         s_Instance = this;
     }
 
     /// <summary>
-    ///     Use @startInk in Naninovel to start the ink story.
+    ///     Allows custom @startInkStory Naninovel command to start the ink story.
     /// </summary>
     public static void StartStory() {
-        s_Instance.Story = new Story(s_Instance.inkJSONAsset.text);
+        s_Instance.Story = new Story(s_Instance.m_InkJsonAsset.text);
         s_Instance.m_ScriptPlayer = Engine.GetService<IScriptPlayer>();
         s_Instance.Continue();
     }
 
     /// <summary>
-    ///     Allows InkChoiceCommand to choose the chosen choice index.
+    ///     Allows custom @inkChoice Naninovel command to choose a choice by index.
     /// </summary>
-    /// <param name="index">The index to choose.</param>
-    public static void Choose(int index) {
-        s_Instance.Story.ChooseChoiceIndex(index);
+    /// <param name="choiceIndex">The index to choose.</param>
+    public static void Choose(int choiceIndex) {
+        s_Instance.Story.ChooseChoiceIndex(choiceIndex);
         s_Instance.Continue();
     }
 
     private void Continue() {
         StringBuilder sb = new StringBuilder(Story.ContinueMaximally());
 
-        // Add @choice commands to end of script.
+        // Add @choice commands to end of script for each ink choice.
         foreach (Choice choice in Story.currentChoices) {
             sb.AppendLine($"@choice \"{choice.text}\" goto:.Choice{choice.index}");
         }
 
         sb.AppendLine("@stop");
 
-        // Add # Choice goto labels
+        // Add corresponding # Choice labels for each choice that trigger the matching @inkChoice command
         foreach (Choice choice in Story.currentChoices) {
             sb.AppendLine();
             sb.AppendLine($"# Choice{choice.index}");
@@ -59,12 +57,7 @@ public class NaninovelInkAdapter : MonoBehaviour {
             sb.AppendLine("@stop");
         }
 
-        string storyName = $"{inkJSONAsset.name}{m_ScriptIndex++}";
-        string naniStoryText = sb.ToString();
-        Debug.Log($"Creating story '{storyName}':\n{naniStoryText}");
-
-        m_CurrentScript = Script.FromScriptText(storyName, naniStoryText);
-        m_ScriptPlayer.Stop();
-        m_ScriptPlayer.Play(m_CurrentScript);
+        Script naniScript = Script.FromScriptText($"{m_InkJsonAsset.name}{m_ScriptIndex++}", sb.ToString());
+        m_ScriptPlayer.Play(naniScript);
     }
 }

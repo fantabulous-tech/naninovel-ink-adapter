@@ -231,8 +231,8 @@ k.Confidence: That's what I call happiness overdose!
 @char n.Default scale:1 wait:false
 @char k.Default
 n.Pain: I was going to die...
-@hidePrinter 
-@wait 1
+@hidePrinter
+@wait 1 
 
 n.Default: By the way, those glitch effects were scary as hell; was it some kind of an <b>@spawn</b> command?
 k.Confidence: Yep, similar to the one you've used for shaking text window.[i] Wanna try?[skipInput]
