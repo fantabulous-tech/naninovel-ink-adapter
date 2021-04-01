@@ -5,7 +5,7 @@ Allows [Inkle's Ink script](https://www.inklestudios.com/ink/) to run [Navinovel
 ## Demo
 
 To run the demo:
-1. Pull down this project
+1. Clone this project
 2. Open the Naninovel Ink Adapter Unity folder in Unity
 3. Open the Assets/Scenes/StartScene scene
 4. Press 'Play'
@@ -14,23 +14,22 @@ You should see the full Naninovel demo prefixed with 'You are now running an Ink
 
 ## Setup
 
-To create an Ink-run game from scratch:
-1. Create a Unity project with both Naninovel and Ink add ons installed
+To create an Ink-driven game that runs Naninovel commands from scratch:
+1. Create a Unity project with both [Naninovel](https://assetstore.unity.com/packages/tools/game-toolkits/naninovel-visual-novel-engine-135453) and [Ink](https://assetstore.unity.com/packages/tools/integration/ink-unity-integration-60055) Unity Store packages installed
 2. Copy the `Assets/Naninovel Ink Adapter/` folder into your project
-3. Create a gameObject to your start scene
-4. Add the `NaninovelInkAdapter` component to your start scene
-3. Fill in the `Ink JSON Asset` field with the ink JSON you want to run.
-4. Open `Edit > Project Settings... > Naninovel > Scripts`
-5. Click `Manage Scripts Resources` button at the bottom
-6. Add the `Start Ink` script (found in the `Naninovel Ink Adapter` folder)
-7. Click `<- Back to Configuration`
-8. Assign `Start Ink` as the `Start Game Script`
+3. Add the `NaninovelInkAdapter` component to a gameObject in your start scene
+4. Fill in the `Ink Json Asset` field with the ink JSON you wish to run.
+5. Open `Edit > Project Settings... > Naninovel > Scripts`
+6. Click `Manage Scripts Resources` button at the bottom
+7. Add the custom `Start Ink` Naninovel script (found in the `Naninovel Ink Adapter` folder)
+8. Click `<- Back to Configuration`
+9. Assign `Start Ink` as the `Start Game Script` property
 
-Hitting 'Play' should now run the Ink script when you start your Naninovel game.
+Hitting 'Play' in the Unity Editor should now run the Ink script when you start your Naninovel game.
 
-## Inky
+## Custom Inky Highlighting
 
-`Inky/Inky.exe` is a version of Inky that will highlight all `@commands` to help with editing Navinovel scripts in Inky.
+The included `Inky/Inky.exe` is a version of Inky that will highlight all `@commands` and scope words used in those commands to help with editing Navinovel scripts in Inky.
 
 ## License
 
