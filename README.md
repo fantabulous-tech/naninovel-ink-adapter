@@ -10,7 +10,7 @@ To run the demo:
 3. Open the Assets/Scenes/StartScene scene
 4. Press 'Play'
 
-You should see the full Naninovel demo prefixed with 'You are now running an Ink script!'
+You should see the full Naninovel demo prefixed with 'You are now running an Ink script!' You can see the ink script with Naninovel demo commands [here](https://github.com/fantabulous-tech/naninovel-ink-adapter).
 
 ## Setup
 
